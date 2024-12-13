@@ -319,7 +319,7 @@ class Operaciones:
                 "action": {
                     "buttons": [
                         {"type": "reply", "reply": {"id": "NoAy", "title": "No, Gracias!"}},
-                        {"type": "reply", "reply": {"id": "SiAy", "title": "Llevame al menu principal"}},
+                        {"type": "reply", "reply": {"id": "SiAy", "title": "Llevame al menu principal"}}
                     ]
                 },
             },
