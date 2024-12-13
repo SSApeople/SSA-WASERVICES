@@ -306,3 +306,59 @@ class Operaciones:
         except Exception as e:
             return "Procesado"
 
+    def PreguntarSalida(self,value):
+        Celular = value['from'].replace("521", "52")
+        data = {
+            "messaging_product": "whatsapp",
+            "to": Celular,
+            "type": "interactive",
+            "interactive": {
+                "type": "button",
+                
+                "body": {"text": "¿Hay algo mas en lo que pueda ayudarte?"},
+                
+                "action": {
+                    "buttons": [
+                        {"type": "reply", "reply": {"id": "NoAy", "title": "No, Gracias!"}},
+                        {"type": "reply", "reply": {"id": "SiAy", "title": "Llevame al menu principal"}},
+                    ]
+                },
+            },
+        }
+        VALOR_ = requests.post(self.url, headers=self.headers, json=data)
+        try:
+            Error_ = VALOR_.content.decode('utf-8')
+            return Error_
+        except Exception as e:
+            return "Procesado"
+        
+
+
+
+
+    def Despedida(self,value):
+        
+ 
+        copy_ = "Fue un placer atenderte, si requieres mas ayuda siempre puede escribirme un *Hola* y con gusto te responderé"
+ 
+ 
+        
+        
+        Celular = value['from'].replace("521", "52")
+        data = {
+            "messaging_product": "whatsapp",
+            "to": Celular,   
+            "type": "text",   
+            "text": {
+                "body": copy_
+            },
+        }
+        VALOR_ = requests.post(self.url, headers=self.headers, json=data)
+        try:
+            Error_ = VALOR_.content.decode('utf-8')
+            return Error_
+        except Exception as e:
+            return "Procesado"
+
+
+

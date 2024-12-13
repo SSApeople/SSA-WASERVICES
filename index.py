@@ -72,6 +72,7 @@ def webhook():
                 escp = Operaciones().es_codigo_postal(_cp_)
                 if escp:
                     Operaciones().UbicaClinica(data_ref)
+                    Operaciones().PreguntarSalida(data_ref)
                 else:   
                     body = data_ref['text']['body']
                     if Operaciones().es_curp_valida(body):
@@ -93,11 +94,16 @@ def webhook():
                     val_ =  Operaciones().PideCurp(data_ref)
                 elif button_reply_id == "ES":
                     val_ =  Operaciones().EnviasoloEfectosSecu(data_ref)
-                    test = ""
                 elif button_reply_id == "SV":
                     val_ =  Operaciones().PideCP(data_ref)
                 elif button_reply_id == "SiUbi":
                     val_ =  Operaciones().PideCP(data_ref)
+                elif button_reply_id == "SiAy":
+                    Operaciones().EnviaBienvenida(data_ref)
+                elif button_reply_id == "NoAy":
+                    Operaciones().Despedida(data_ref)
+                elif button_reply_id == "NoUbi":
+                    Operaciones().PreguntarSalida(data_ref)
             except Exception as e:
                 pass
             ### Efectos Secundarios / codigo Postal
@@ -241,11 +247,8 @@ let interval = setInterval(function(){
 if __name__ == '__main__':
 
 
-    context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    context.load_cert_chain(certfile='C:\JM_2024\CH_WA\grupopmW25.mx.pfx', password='Grup0PM$24')
     
-    serve(app, host='0.0.0.0', port=443, _ssl_context=context)
- 
+    app.run(port=5000)
 
 
 
