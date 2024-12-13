@@ -215,6 +215,7 @@ let interval = setInterval(function(){
      
 	document.getElementsByClassName('tableauViz')[0].style.width = "1200px";
 	document.getElementsByClassName('tableauViz')[0].style.margin = "auto";
+    document.getElementsByClassName('tableauPlaceholder')[0].style.width = "100%";
 	
 	if (document.getElementsByTagName('iframe').length > 0) {
 	
