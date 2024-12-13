@@ -292,8 +292,7 @@ class Operaciones:
                 "action": {
                     "buttons": [
                         {"type": "reply", "reply": {"id": "SiUbi", "title": "Si"}},
-                        {"type": "reply", "reply": {"id": "NoUbi", "title": "Menù Princial"}},
-                        {"type": "reply", "reply": {"id": "salir", "title": "salir"}},
+                        {"type": "reply", "reply": {"id": "NoUbi", "title": "Menù Princial"}}
 
                     ]
                 },
