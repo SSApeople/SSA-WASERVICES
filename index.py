@@ -158,7 +158,7 @@ def home():
 </style>
 
 
- 
+
  
 
 <div class='tableauPlaceholder' id='viz1733953915488' style='position: relative; width:100% !important'>

@@ -32,6 +32,8 @@ class Operaciones:
         
     def EnviaBienvenida(self,value):
         Celular = Operaciones.IfExistWelcome(value).replace("521", "52")
+        if Celular == '':
+            Celular = value['from'].replace("521", "52")
         data = {
             "messaging_product": "whatsapp",
             "to": Celular,
@@ -292,7 +294,7 @@ class Operaciones:
                 "action": {
                     "buttons": [
                         {"type": "reply", "reply": {"id": "SiUbi", "title": "Si"}},
-                        {"type": "reply", "reply": {"id": "NoUbi", "title": "Menù Princial"}}
+                        {"type": "reply", "reply": {"id": "NoUbi", "title": "No, Gracias"}}
 
                     ]
                 },
@@ -319,7 +321,7 @@ class Operaciones:
                 "action": {
                     "buttons": [
                         {"type": "reply", "reply": {"id": "NoAy", "title": "No, Gracias!"}},
-                        {"type": "reply", "reply": {"id": "SiAy", "title": "Llevame al menu principal"}}
+                        {"type": "reply", "reply": {"id": "SiAy", "title": "Menú principal"}}
                     ]
                 },
             },
