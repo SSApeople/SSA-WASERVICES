@@ -151,7 +151,7 @@ class Operaciones:
             "to": Celular,   
             "type": "text",   
             "text": {
-                "body": "Ingresa tu código Postal para poder decirte que clinicas estan cerca de tu domicilio y puedas aplicarte tu vacuna de COVID."
+                "body": "Ingresa tu código postal para poder informarte qué clínicas están cerca de tu domicilio y dónde puedes aplicarte la vacuna."
             },
         }
         VALOR_ = requests.post(self.url, headers=self.headers, json=data)
@@ -180,7 +180,7 @@ class Operaciones:
     
     def UbicaClinica(self,value):
         
-        copy_ = "Las clinicas donde puedes acudir a ponerte tu vacuna de COVID cerca de tu domicilio son:\n\n\n"
+        copy_ = "Las clínicas cercanas a tu domicilio donde puedes acudir para ponerte la vacuna requerida son: \n\n\n"
         copy_ = copy_ + "IMSS Unidad de Medicina Familiar 28 'DEL VALLE'\n"
         copy_ = copy_ + "https://maps.app.goo.gl/CxK7dTX6GFjTKWoZ9\n\n"
         
@@ -289,7 +289,7 @@ class Operaciones:
             "interactive": {
                 "type": "button",
                 
-                "body": {"text": "Quieres ubicar un puesto de vacunaciòn cercano a tu domicilio?"},
+                "body": {"text": "¿Quieres ubicar un puesto de vacunación cercano a tu domicilio?"},
                 
                 "action": {
                     "buttons": [
@@ -316,7 +316,7 @@ class Operaciones:
             "interactive": {
                 "type": "button",
                 
-                "body": {"text": "¿Hay algo mas en lo que pueda ayudarte?"},
+                "body": {"text": "¿Hay algo más en lo que pueda ayudarte?"},
                 
                 "action": {
                     "buttons": [
@@ -340,7 +340,7 @@ class Operaciones:
     def Despedida(self,value):
         
  
-        copy_ = "Fue un placer atenderte, si requieres mas ayuda siempre puede escribirme un *Hola* y con gusto te responderé"
+        copy_ = "Fue un placer atenderte. Si necesitas más ayuda, siempre puedes escribirme un Hola y con gusto te responderé."
  
  
         
