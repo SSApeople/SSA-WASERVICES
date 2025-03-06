@@ -5,8 +5,8 @@ import re
 class Operaciones:
     
     def __init__(self):
-        self.token = "EAARM4gGaSxsBO8QH5pZCFOtJYZAe8AVHd3dXFuZCFG4ZCyLLHuZC4uPXKGDN3jscFnJxXxN1RVMDZANFZBkgjYsobZAQZCZAbFin2n8SeOIoOVc2DGG18wXiZBbHFZCyXaeoj4K3TkrwIBhLi1dgPYQKtOAXluTFbeQU9ejPE2HkUN84Y7u7k904VYHfBNJwkNNZCv6ih"
-        self.numIdentif = "429808380226322"
+        self.token = "EAAG6HTTog3oBO98BlCwJ4xtPl1ytvgnGYb7DRhuomZBi2Jlb5mqL3v7Q2Hw1ctFaqZCF2CGkXR0lcmvcieYjGXej4BZAVyRYe6ccdw75QYTkLP4NZBu1aizIZCKMQV5speyyvIYcioDn9btFd4CiKmNVZAN0d01VCg2l22McltlekdZAKDPlDJZBlCxG"
+        self.numIdentif = "557935180732301"
         self.imageWelcome = "https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/61e7d9b79fb925830e9a4a64d326b09f"
         self.headers = {
             "Authorization": f"Bearer {self.token}",

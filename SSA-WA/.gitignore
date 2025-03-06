@@ -1,0 +1,88 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+*.cache
+*.pytest_cache/
+*.pyo
+
+# Flask-related
+instance/
+*.db
+*.sqlite3
+*.log
+#.env
+.venv/
+env/
+venv/
+venv.bak/
+#*.env
+*.flaskenv
+
+# Virtual environment
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg-info
+
+# Distribution / packaging
+.Python
+develop-eggs/
+parts/
+sdist/
+var/
+*.tar.gz
+*.zip
+*.whl
+
+# PyInstaller
+#  Usually these files are written by a Python app using PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Other environment files
+.envrc
+.vscode/
+.pylintrc
+.pytest_cache/
